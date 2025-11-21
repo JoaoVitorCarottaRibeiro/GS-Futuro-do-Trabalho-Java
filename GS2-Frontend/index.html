@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LibraAI - Painel Administrativo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>LibraAI - Painel Administrativo</h1>
+        <button onclick="logout()" id="logoutBtn" style="display:none;">Sair</button>
+    </header>
+
+    <section id="auth-section">
+        <h2>Login</h2>
+        <input type="email" id="loginEmail" placeholder="Email">
+        <input type="password" id="loginSenha" placeholder="Senha">
+        <button class="btn-login" onclick="login()">Entrar</button>
+        <p>Não tem conta? <a href="#" class="cadastrar-link" onclick="showSignup()">Cadastrar</a></p>
+    </section>
+
+    
+    <section id="signup-section" style="display:none;">
+        <h2>Cadastro</h2>
+        <input type="text" id="signupNome" placeholder="Nome">
+        <input type="number" id="signupIdade" placeholder="Idade">
+        <input type="text" id="signupProfissao" placeholder="Profissão">
+        <input type="email" id="signupEmail" placeholder="Email">
+        <input type="password" id="signupSenha" placeholder="Senha">
+        <button onclick="signup()" class="btn-signup">Cadastrar</button>
+        <p>Já tem conta? <a href="#" onclick="showLogin()" class="cadastrar-link">Login</a></p>
+    </section>
+
+    
+    <section id="app-section" style="display:none;">
+        <h2>Bem-vindo, <span id="userName"></span></h2>
+
+        <div class="dashboard">
+
+            <div class="card">
+                <h3>Usuários</h3>
+                <input type="text" id="newUsuarioNome" placeholder="Nome">
+                <input type="number" id="newUsuarioIdade" placeholder="Idade">
+                <input type="text" id="newUsuarioProfissao" placeholder="Profissão">
+                <input type="email" id="newUsuarioEmail" placeholder="Email">
+                <input type="password" id="newUsuarioSenha" placeholder="Senha">
+                <button onclick="createUsuario()">Adicionar Usuário</button>
+                <div id="usuariosList"></div>
+            </div>
+
+            <div class="card">
+                <h3>Trilhas</h3>
+                <input type="text" id="newTrilhaNome" placeholder="Nome">
+                <input type="text" id="newTrilhaNivel" placeholder="Nível">
+                <input type="number" id="newTrilhaCarga" placeholder="Carga Horária">
+                <button onclick="createTrilha()">Adicionar Trilha</button>
+                <div id="trilhasList"></div>
+            </div>
+
+            
+            <div class="card">
+                <h3>Competências</h3>
+                <input type="text" id="newCompetenciaNome" placeholder="Nome">
+                <input type="text" id="newCompetenciaCategoria" placeholder="Categoria">
+                <button onclick="createCompetencia()">Adicionar Competência</button>
+                <div id="competenciasList"></div>
+            </div>
+
+          
+            <div class="card">
+                <h3>Sinais</h3>
+                <input type="text" id="newSinalDados" placeholder="Dados do Sinal">
+                <button onclick="createSinal()">Adicionar Sinal</button>
+                <div id="sinaisList"></div>
+            </div>
+
+            
+            <div class="card">
+                <h3>Inscrições</h3>
+                <input type="number" id="newInscricaoUsuarioId" placeholder="ID do Usuário">
+                <input type="number" id="newInscricaoTrilhaId" placeholder="ID da Trilha">
+                <button onclick="createInscricao()">Adicionar Inscrição</button>
+                <div id="inscricoesList"></div>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

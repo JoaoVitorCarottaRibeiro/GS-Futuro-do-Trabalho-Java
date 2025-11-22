@@ -86,6 +86,6 @@ Exemplo de uso do JSON:
   "senha": "teste12345"
 }
 
-Link do projeto contendo a IA:
+Link do projeto contendo a IA (atualmente a IA ainda não funciona em celulares, apenas computador, estamos trabalhando na implementação): https://libraai.onrender.com/
   
 
